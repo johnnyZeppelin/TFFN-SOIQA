@@ -1,0 +1,10 @@
+paths:
+  data_root: /workspace/TFFN-SOIQA/data
+  csv_path: /workspace/TFFN-SOIQA/data/DMOS.csv
+  live3dvr_dir: /workspace/TFFN-SOIQA/data/Images
+  restored_live3dvr_dir: /workspace/TFFN-SOIQA/data/Images_r
+  viewport_dir: /workspace/TFFN-SOIQA/data/view_ports
+  restored_viewport_dir: /workspace/TFFN-SOIQA/data/view_ports_r
+  manifest_path: data/manifests/live3dvr_manifest.csv
+  train_manifest_path: data/manifests/live3dvr_train.csv
+  test_manifest_path: data/manifests/live3dvr_test.csv

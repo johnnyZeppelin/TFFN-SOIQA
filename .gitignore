@@ -1,3 +1,13 @@
+# Files and Folders
+data
+ckpts
+
+# --- ignore weights ---
+*.pt
+*.pth
+*.ckpt
+*.bin
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
