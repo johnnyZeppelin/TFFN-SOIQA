@@ -1,5 +1,10 @@
 {
-  "placeholder": true,
-  "path": "outputs/live3dvr_baseline/preds/best_metrics.json",
-  "note": "Representative file for verifying expected filenames and locations in the current v6 project."
+  "PLCC": 0.8861034308939888,
+  "SRCC": 0.8914013074431427,
+  "KRCC": 0.7611551494553928,
+  "RMSE": 4.3466402662459607,
+  "PLCC_raw": 0.8861034308939888,
+  "RMSE_raw": 4.3466402662459607,
+  "monitor": "SRCC",
+  "monitor_mode": "max"
 }

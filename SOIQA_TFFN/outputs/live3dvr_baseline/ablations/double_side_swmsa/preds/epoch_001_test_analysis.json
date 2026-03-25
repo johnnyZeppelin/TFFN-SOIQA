@@ -1,5 +1,0 @@
-{
-  "placeholder": true,
-  "path": "outputs/live3dvr_baseline/ablations/double_side_swmsa/preds/epoch_001_test_analysis.json",
-  "note": "Representative file for verifying expected filenames and locations in the current v6 project."
-}
