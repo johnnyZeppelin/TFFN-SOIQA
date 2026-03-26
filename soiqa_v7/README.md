@@ -1,8 +1,8 @@
 # SOIQA_TFFN
 
-A package-first PyTorch implementation of a viewport-based SOIQA project inspired by the TFFN paper.
+The implementation of a viewport-based SOIQA project of TFFN (https://doi.org/10.1109/TMM.2026.3664949).
 
-This version is updated specifically for the LIVE3DVR layout below and does **not** require you to change your dataset structure:
+The dataset structure:
 
 ```text
 /workspace/TFFN-SOIQA/data/
@@ -38,7 +38,7 @@ The CSV is assumed to contain exactly these two columns:
 
 ## Important implementation note
 
-The original paper is not open-sourced. This repository follows the paper structure where the details are clear and uses a practical, runnable approximation where details are missing. The PDIE branch is now wired to the official VMamba implementation. By default it looks for `/workspace/external_repos/VMamba/vmamba.py` and `/workspace/TFFN-SOIQA/vssms/vssm1_tiny_0230s_ckpt_epoch_264.pth`, and falls back to a vendored copy of the official `vmamba.py` when the external repo path is unavailable.
+The PDIE branch is wired to the official VMamba implementation. By default it looks for `/workspace/external_repos/VMamba/vmamba.py` and `/workspace/TFFN-SOIQA/vssms/vssm1_tiny_0230s_ckpt_epoch_264.pth`, and falls back to a vendored copy of the official `vmamba.py` when the external repo path is unavailable.
 
 ## Installation
 
