@@ -1,0 +1,28 @@
+{
+  "train": {
+    "num_samples": 360,
+    "num_contents": 12,
+    "distortion_counts": {
+      "ds": 60,
+      "gb": 60,
+      "gn": 60,
+      "st": 60,
+      "vp9": 60,
+      "x265": 60
+    }
+  },
+  "test": {
+    "num_samples": 90,
+    "num_contents": 3,
+    "distortion_counts": {
+      "ds": 15,
+      "gb": 15,
+      "gn": 15,
+      "st": 15,
+      "vp9": 15,
+      "x265": 15
+    }
+  },
+  "content_overlap_count": 0,
+  "content_overlap_preview": []
+}

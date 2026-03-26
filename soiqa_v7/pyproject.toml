@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soiqa-tffn"
+version = "0.1.0"
+description = "Viewport-based SOIQA baseline inspired by TFFN"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "OpenAI assistant for Sifan Li" }
+]
+dependencies = [
+  "torch>=2.1.0",
+  "pandas>=2.0.0",
+  "numpy>=1.24.0",
+  "Pillow>=10.0.0",
+  "PyYAML>=6.0.0",
+  "scipy>=1.10.0",
+  "tqdm>=4.66.0",
+  "timm==0.4.12",
+  "fvcore>=0.1.5.post20221221",
+  "iopath>=0.1.10",
+  "yacs>=0.1.8",
+  "termcolor>=2.4.0",
+  "einops>=0.7.0",
+  "chardet>=5.2.0",
+  "packaging>=24.0",
+  "ninja>=1.11.1",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+soiqa-train = "soiqa_tffn.cli.train:main"
+soiqa-eval = "soiqa_tffn.cli.eval:main"
+soiqa-build-manifest = "soiqa_tffn.cli.build_manifest:main"
+soiqa-split-manifest = "soiqa_tffn.cli.split_manifest:main"
+soiqa-inspect = "soiqa_tffn.cli.inspect_one:main"
+soiqa-check-integrity = "soiqa_tffn.cli.check_integrity:main"
+soiqa-smoke-test = "soiqa_tffn.cli.smoke_test:main"
+soiqa-prepare-data = "soiqa_tffn.cli.prepare_data:main"
+soiqa-run-repeats = "soiqa_tffn.cli.run_repeats:main"
+soiqa-generate-ablations = "soiqa_tffn.cli.run_ablations:main"
+soiqa-summarize-results = "soiqa_tffn.cli.summarize_results:main"

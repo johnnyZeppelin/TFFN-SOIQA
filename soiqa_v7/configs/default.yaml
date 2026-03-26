@@ -1,0 +1,135 @@
+project:
+  name: soiqa_tffn_live3dvr
+  output_dir: outputs/live3dvr_baseline
+  seed: 3407
+  num_workers: 4
+  persistent_workers: true
+  pin_memory: true
+  device: auto
+  torch_num_threads: 1
+  torch_num_interop_threads: 1
+
+paths:
+  data_root: /workspace/TFFN-SOIQA/data
+  csv_path: /workspace/TFFN-SOIQA/data/DMOS.csv
+  live3dvr_dir: /workspace/TFFN-SOIQA/data/Images
+  restored_live3dvr_dir: /workspace/TFFN-SOIQA/data/Images_r
+  viewport_dir: /workspace/TFFN-SOIQA/data/view_ports
+  restored_viewport_dir: /workspace/TFFN-SOIQA/data/view_ports_r
+  manifest_path: data/manifests/live3dvr_manifest.csv
+  train_manifest_path: data/manifests/live3dvr_train.csv
+  test_manifest_path: data/manifests/live3dvr_test.csv
+
+manifest:
+  image_name_col: ImageName
+  score_col: DMOS
+  num_viewports: 20
+  restored_suffix: _r
+  strict_check: true
+  allow_missing_full_image: true
+  allow_missing_restored_full_image: true
+
+dataset:
+  name: live3dvr
+  stereo_packing_mode: nested_left_right   # nested_left_right | top_bottom | left_right | separate_files
+  top_bottom_order: top_left_bottom_right
+  left_right_order: left_left_right_right
+  left_dir_name: left
+  right_dir_name: right
+  viewport_ext: .png
+  num_viewports: 20
+  input_size: 256
+  resize_split_halves_back: true
+  load_left_restored_for_debug: false
+  normalization:
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+  augment:
+    train_hflip: false
+    color_jitter: false
+  separate_file_suffix_left: _L
+  separate_file_suffix_right: _R
+  score_type: dmos
+
+split:
+  train_ratio: 0.8
+  seed: 3407
+  shuffle: true
+  strategy: by_content   # random | by_content
+  group_col: content_name
+
+model:
+  backbone_name: resnet50
+  pretrained_resnet: false
+  stem_channels: 64
+  layer1_channels: 256
+  blocks_per_stage: 2
+  stage_channels: [512, 1024, 2048]
+  proj_dim: 256
+  bd_dim: 256
+  bs_dim: 256
+  mf_dim: 256
+  ff_hidden_dim: 512
+  num_heads: 8
+  window_size: 4
+  pdie_depth: 4
+  pdie_encoder: official_vmamba   # official_vmamba | vmamba_like
+  pdie_concat_mode: grid         # grid is recommended for official VMamba
+  vmamba:
+    source: auto                 # auto | external | vendor
+    repo_root: /workspace/external_repos/VMamba
+    checkpoint_path: /workspace/TFFN-SOIQA/vssms/vssm1_tiny_0230s_ckpt_epoch_264.pth
+    variant: vmamba_tiny_s1l8
+    pretrained: true
+    strict_load: false
+    out_index: 3
+    input_size: [224, 224]
+    grid_layout: [4, 5]
+    channel_first: true
+    disable_triton: true
+    force_torch_scan: false
+    freeze_backbone: false
+  dropout: 0.1
+  use_tpf_bd: true
+  use_tpf_bs: true
+  use_pdie: true
+  ff_mode: ff                  # ff | simple_concat
+  bd_double_side_swmsa: false
+
+train:
+  epochs: 50
+  batch_size: 8
+  optimizer: sgd
+  lr: 0.001
+  momentum: 0.9
+  weight_decay: 0.0001
+  grad_clip_norm: 5.0
+  log_interval: 10
+  save_every: 1
+  amp: true
+
+scheduler:
+  name: cosine
+  min_lr_ratio: 0.001
+  warmup_epochs: 3
+
+loss:
+  name: mse
+
+eval:
+  batch_size: 8
+  save_predictions: true
+  prediction_csv_name: test_predictions.csv
+  analysis_json_name: eval_analysis.json
+  apply_logistic_fit: false
+
+score_norm:
+  enabled: false
+  mode: zscore   # none | zscore | minmax
+
+early_stop:
+  enabled: false
+  patience: 10
+  min_delta: 0.0
+  monitor: SRCC
+  mode: max

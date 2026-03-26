@@ -1,0 +1,172 @@
+Project Structure for: /workspace/TFFN-SOIQA/data
+==================================================
+├── 📁 Images/
+│   ├── 📄 Bullock_ds_1.png
+│   ├── 📄 Bullock_ds_2.png
+│   ├── 📄 Bullock_ds_3.png
+│   └── ... (and 447 more files)
+├── 📁 Images_r/
+│   ├── 📄 Bullock_ds_1_r.png
+│   ├── 📄 Bullock_ds_2_r.png
+│   ├── 📄 Bullock_ds_3_r.png
+│   └── ... (and 447 more files)
+├── 📁 view_ports/
+│   ├── 📁 Bullock_ds_1/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_ds_1_left_01.png
+│   │   │   ├── 📄 Bullock_ds_1_left_02.png
+│   │   │   ├── 📄 Bullock_ds_1_left_03.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_ds_1_right_01.png
+│   │       ├── 📄 Bullock_ds_1_right_02.png
+│   │       ├── 📄 Bullock_ds_1_right_03.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_ds_2/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_ds_2_left_01.png
+│   │   │   ├── 📄 Bullock_ds_2_left_02.png
+│   │   │   ├── 📄 Bullock_ds_2_left_03.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_ds_2_right_01.png
+│   │       ├── 📄 Bullock_ds_2_right_02.png
+│   │       ├── 📄 Bullock_ds_2_right_03.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_ds_3/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_ds_3_left_01.png
+│   │   │   ├── 📄 Bullock_ds_3_left_02.png
+│   │   │   ├── 📄 Bullock_ds_3_left_03.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_ds_3_right_01.png
+│   │       ├── 📄 Bullock_ds_3_right_02.png
+│   │       ├── 📄 Bullock_ds_3_right_03.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_ds_4/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_ds_4_left_01.png
+│   │   │   ├── 📄 Bullock_ds_4_left_02.png
+│   │   │   ├── 📄 Bullock_ds_4_left_03.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_ds_4_right_01.png
+│   │       ├── 📄 Bullock_ds_4_right_02.png
+│   │       ├── 📄 Bullock_ds_4_right_03.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_ds_5/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_ds_5_left_01.png
+│   │   │   ├── 📄 Bullock_ds_5_left_02.png
+│   │   │   ├── 📄 Bullock_ds_5_left_03.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_ds_5_right_01.png
+│   │       ├── 📄 Bullock_ds_5_right_02.png
+│   │       ├── 📄 Bullock_ds_5_right_03.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_gb_1/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_gb_1_left_01.png
+│   │   │   ├── 📄 Bullock_gb_1_left_02.png
+│   │   │   ├── 📄 Bullock_gb_1_left_03.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_gb_1_right_01.png
+│   │       ├── 📄 Bullock_gb_1_right_02.png
+│   │       ├── 📄 Bullock_gb_1_right_03.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_gb_2/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_gb_2_left_01.png
+│   │   │   ├── 📄 Bullock_gb_2_left_02.png
+│   │   │   ├── 📄 Bullock_gb_2_left_03.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_gb_2_right_01.png
+│   │       ├── 📄 Bullock_gb_2_right_02.png
+│   │       ├── 📄 Bullock_gb_2_right_03.png
+│   │       └── ... (and 17 more files)
+│   └── ... (and 443 more directories)
+├── 📁 view_ports_r/
+│   ├── 📁 Bullock_ds_1/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_ds_1_left_01_r.png
+│   │   │   ├── 📄 Bullock_ds_1_left_02_r.png
+│   │   │   ├── 📄 Bullock_ds_1_left_03_r.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_ds_1_right_01_r.png
+│   │       ├── 📄 Bullock_ds_1_right_02_r.png
+│   │       ├── 📄 Bullock_ds_1_right_03_r.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_ds_2/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_ds_2_left_01_r.png
+│   │   │   ├── 📄 Bullock_ds_2_left_02_r.png
+│   │   │   ├── 📄 Bullock_ds_2_left_03_r.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_ds_2_right_01_r.png
+│   │       ├── 📄 Bullock_ds_2_right_02_r.png
+│   │       ├── 📄 Bullock_ds_2_right_03_r.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_ds_3/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_ds_3_left_01_r.png
+│   │   │   ├── 📄 Bullock_ds_3_left_02_r.png
+│   │   │   ├── 📄 Bullock_ds_3_left_03_r.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_ds_3_right_01_r.png
+│   │       ├── 📄 Bullock_ds_3_right_02_r.png
+│   │       ├── 📄 Bullock_ds_3_right_03_r.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_ds_4/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_ds_4_left_01_r.png
+│   │   │   ├── 📄 Bullock_ds_4_left_02_r.png
+│   │   │   ├── 📄 Bullock_ds_4_left_03_r.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_ds_4_right_01_r.png
+│   │       ├── 📄 Bullock_ds_4_right_02_r.png
+│   │       ├── 📄 Bullock_ds_4_right_03_r.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_ds_5/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_ds_5_left_01_r.png
+│   │   │   ├── 📄 Bullock_ds_5_left_02_r.png
+│   │   │   ├── 📄 Bullock_ds_5_left_03_r.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_ds_5_right_01_r.png
+│   │       ├── 📄 Bullock_ds_5_right_02_r.png
+│   │       ├── 📄 Bullock_ds_5_right_03_r.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_gb_1/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_gb_1_left_01_r.png
+│   │   │   ├── 📄 Bullock_gb_1_left_02_r.png
+│   │   │   ├── 📄 Bullock_gb_1_left_03_r.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_gb_1_right_01_r.png
+│   │       ├── 📄 Bullock_gb_1_right_02_r.png
+│   │       ├── 📄 Bullock_gb_1_right_03_r.png
+│   │       └── ... (and 17 more files)
+│   ├── 📁 Bullock_gb_2/
+│   │   ├── 📁 left/
+│   │   │   ├── 📄 Bullock_gb_2_left_01_r.png
+│   │   │   ├── 📄 Bullock_gb_2_left_02_r.png
+│   │   │   ├── 📄 Bullock_gb_2_left_03_r.png
+│   │   │   └── ... (and 17 more files)
+│   │   └── 📁 right/
+│   │       ├── 📄 Bullock_gb_2_right_01_r.png
+│   │       ├── 📄 Bullock_gb_2_right_02_r.png
+│   │       ├── 📄 Bullock_gb_2_right_03_r.png
+│   │       └── ... (and 17 more files)
+│   └── ... (and 443 more directories)
+└── 📄 DMOS.csv
+
